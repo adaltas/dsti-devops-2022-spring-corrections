@@ -15,7 +15,7 @@ jobs:
       run:
         working-directory: userapi
 
-    # Service containers to run with `container-job`
+    # Service containers to run with `runner-job`
     services:
       # Label used to access the service container
       redis:
@@ -27,6 +27,9 @@ jobs:
           --health-interval 10s
           --health-timeout 5s
           --health-retries 5
+        ports:
+          # Maps port 6379 on service container to the host
+          - 6379:6379
 
     strategy:
       matrix:
