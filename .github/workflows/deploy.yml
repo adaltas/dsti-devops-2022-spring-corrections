@@ -14,4 +14,5 @@ jobs:
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "dsti-devops-2022-spring" #Must be unique in Heroku
-          heroku_email: "YOUR EMAIL"
+          heroku_email: "sergkudinov@gmail.com"
+          appdir: userapi
