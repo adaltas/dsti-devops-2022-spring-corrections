@@ -1,0 +1,8 @@
+---
+- hosts: node_server
+  # Run commands as root
+  become: true
+  # Roles to be executed on these hosts
+  roles:
+  - role: node/install
+    tags: install
